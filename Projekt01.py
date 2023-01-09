@@ -18,7 +18,7 @@ def usernameW(data):
                 completeUsername = z[usernameStart:].partition("'")[0]
                 if completeUsername[0] == 'w':
                     usernames.append(completeUsername)
-    return usernames  # return the list of usernames
+    return usernames 
 
 
 #kako uzet prvih sto?
@@ -34,7 +34,7 @@ def usernameD(data):
                 completeUsername = z[usernameStart:].partition("'")[0]
                 if completeUsername[0] == 'd':
                     usernames.append(completeUsername)
-    return usernames  # return the list of usernames
+    return usernames 
 
 #-----------------------------------------------------------------------------
 file = open('test1.json')
