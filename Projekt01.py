@@ -18,7 +18,7 @@ def usernameW(data):
                 completeUsername = z[usernameStart:].partition("'")[0]
                 if completeUsername[0] == 'w':
                     usernames.append(completeUsername)
-    return usernames 
+    return usernames  
 
 
 #kako uzet prvih sto?
@@ -34,7 +34,7 @@ def usernameD(data):
                 completeUsername = z[usernameStart:].partition("'")[0]
                 if completeUsername[0] == 'd':
                     usernames.append(completeUsername)
-    return usernames 
+    return usernames  
 
 #-----------------------------------------------------------------------------
 file = open('test1.json')
@@ -43,12 +43,12 @@ usernameW(data)
 usernameD(data)
 
 usernames_w = usernameW(data)
-print(usernames_w)
+print(usernames_w) #ne zaboravi obrisat
 usernames_d = usernameD(data)
 print(usernames_d)
 
-db.users.insert_many([{"username": username} for username in usernames_w])
-db.users.insert_many([{"username": username} for username in usernames_d])
+db.users.insert_many([{"username": username} for username in usernames_w]) #ovo radi ali treba skroz promjenit
+db.users.insert_many([{"username": username} for username in usernames_d])#ovo radi ali treba skroz promjenit
         
 #app = Flask(__name__)
 
